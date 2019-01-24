@@ -62,7 +62,7 @@ sudo ufw allow 2200/tcp
 sudo ufw allow 80/tcp
 sudo ufw allow 123/udp
 sudo ufw enable
-now see all the changes to the firewall sudo ufw status reboot server ( from aws website - reboot button) now you can login again with this commaned from local shell ssh -i .ssh/LightsailDefaultKey-eu-central-1.pem ubuntu@18.185.95.250 -p 2200
+now see all the changes to the firewall sudo ufw status reboot server ( from aws website - reboot button) now you can login again with this commaned from local shell ssh -i .ssh/LightsailDefaultKey-eu-central-1.pem ubuntu@ 18.197.120.206-p 2200
 
 Configure the local timezone to UTC
 select None of the above then select UTC sudo dpkg-reconfigure tzdata
@@ -111,8 +111,6 @@ Now,create a new database user with least privilleges. CREATE DATABASE catalog;
 
 Now,create a user CREATE USER catalog;
 
-Set a password for user catalog which is alaa222 ALTER ROLE catalog WITH PASSWORD 'YourPassWord';
-
 Grant privilleges to catalogdb to catalog user GRANT ALL PRIVILEGES ON DATABASE catalog TO catalog;
 
 Quit postgreSQL \q
@@ -156,12 +154,6 @@ Restart Apache sudo /etc/init.d/apache2 start sudo service apache2 restart
 Deloying catalog Porject to the server:
 Create a folder catalog under the /var/www directory cd /var/www
 
-connect to the remote github repository to pull the project files sudo git clone https://github.com/Alaa-1989/Item-Catalog-Project catalog
-
-if you clone your project in wrong file
-if you want delete repo sudo rm -R catalog/*
-
-if you want delete a dir sudo rm -r catalog
 
 Virtualenironment:
 install pip sudo apt-get install python-pip
@@ -229,14 +221,14 @@ CLIENT_ID = json.loads(
     open('/var/www/catalog/catalog/g_client_secret_.json', 'r').read())['web']['client_id']
 APPLICATION_NAME = "Item Catalog"
 Change the engine with this code
-engine = create_engine('postgresql://catalog:alaa22@localhost/catalog')
+engine = create_engine('postgresql://catalog:deema@localhost/catalog')
 Delete host and port fron app tun
 if __name__ == '__main__':
     app.debug = True
     app.run()
 In this file database_setup.py
 Change the engine with this code
-engine = create_engine('postgresql://catalog:alaa22@localhost/catalog')
+engine = create_engine('postgresql://catalog:deema@localhost/catalog')
 In this file seeder.py
 Change the engine with this code
 engine = create_engine('postgresql://catalog:alaa22@localhost/catalog')
