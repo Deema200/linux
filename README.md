@@ -6,13 +6,12 @@ About
 In this project, we will take a baseline installation of a Linux server and prepare it to host our web applications. we will secure our server from a number of attack vectors, install and configure a database server, and deploy one of our existing web applications onto it. I deployed my web app of Item Catalog Project.
 
 Note For Reviewer
-Public IP 18.185.95.250
-
+Public IP 18.197.120.206
 SSH port 2200
 
-The URL to my hosted web application http://18.185.95.250.xip.io/
+The URL to my hosted web application http://18.179.120.206.xip.io/
 
-Login to the server by grader user ssh grader@18.185.95.250 -p 2200 -i ~/.ssh/grader-key
+Login to the server by grader user ssh grader@18.179.120.206 -p 2200 -i ~/.ssh/grader-key
 
 Third party resources
 
@@ -259,6 +258,6 @@ to created the database tables python database_setup.py
 to inserted the data python seeder.py
 to ran the application file python __init__.py
 In the browser run this url:
-http://18.185.95.250.xip.io/
+http://18.197.120.206.xip.io/
 
 
