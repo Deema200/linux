@@ -89,7 +89,7 @@ if you want to make a password for this user sudo passwd grader
 
 then run sudo service ssh restart
 
-try login with in new local shell ssh grader@18.185.95.250 -p 2200 -i ~/.ssh/grader-key
+try login with in new local shell ssh grader@18.179.120.206 -p 2200 -i ~/.ssh/grader-key
 
 Prevent Root Login using SSH:
 sudo nano /etc/ssh/sshd_config
@@ -188,8 +188,8 @@ Create FlaskApp.conf and edit it sudo nano /etc/apache2/sites-available/FlaskApp
 Add the following to the file to configure the virtual host.
 
 <VirtualHost *:80>
-             ServerName 18.185.95.250.xip.io
-             ServerAdmin 18.185.95.250
+             ServerName 18.179.120.206.xip.io
+             ServerAdmin 18.179.120.206
              WSGIDaemonProcess catalog python-path=/var/www/catalog:/var/www/catalog/venv/lib/python2.7/sit$
              WSGIProcessGroup catalog
              WSGIScriptAlias / /var/www/catalog/flaskapp.wsgi
