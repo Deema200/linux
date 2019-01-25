@@ -11,7 +11,7 @@ SSH port 2200
 
 The URL to my hosted web application http://18.179.120.206.xip.io/
 
-Login to the server by grader user ssh grader@18.179.120.206 -p 2200 -i ~/.ssh/grader-key
+Login to the server by grader user ssh -i id_rsa grader@18.197.120.206 -p2200
 
 Third party resources
 
